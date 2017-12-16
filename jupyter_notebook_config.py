@@ -15,10 +15,15 @@
 import os
 from IPython.lib import passwd
 
+# not working currently
+#c.IPKernelApp.matplotlib = 'inline'
+#c.IPKernelApp.pylab = 'inline'
 c.NotebookApp.ip = '*'
 c.NotebookApp.port = 8888
 c.NotebookApp.open_browser = False
 c.MultiKernelManager.default_kernel_name = 'python2'
+# no token needed
+c.NotebookApp.token = ''
 
 # sets a password if PASSWORD is set in the environment
 if 'PASSWORD' in os.environ:
